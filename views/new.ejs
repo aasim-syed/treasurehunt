@@ -1,0 +1,197 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/playground.css">
+<link rel="stylesheet" href="/css/animsta.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+rel="stylesheet">
+
+
+<body>
+   
+    <div id="home">
+        <nav id="navigator">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/users/sign-out"><li>Sign Out</li></a>
+                
+    
+            </ul>
+        </nav>
+        <div>
+            <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome <br> Back !</h1>
+            <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name%> </h3>  
+            <% if(user.level){ %>
+            <button id="continue" class="text-focus-in">
+                Continue
+            </button>
+            <% } %>
+        </div>
+    </div>
+
+    <% if(user.level == 2){ %>
+ 
+        <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
+            <h1>Hey you have completed level Two!</h1>
+            <h3>Kindly wait for the next level</h3>
+            <p>Level 3 opens on Tomorrow 10:00 AM</p>
+        </div>
+
+    <%}else if(user.level == 1){%>
+
+
+        <div class="" id="question-container" >
+            <p>Q U E S T I O N S</p>
+
+
+
+            <ol id="questions" class="tracking-in-expand" >
+                <li>
+                    <img src="/images/q1.png" alt="q1">
+                </li>
+                <li>
+                    <img src="/images/q2.png" alt="q2">
+                </li>
+                <li><img src="/images/q3.png" alt="q3"></li>
+                <li><img src="/images/q4.png" alt="q4"></li>
+                <li><img src="/images/q5.png" alt="q5"></li>
+                <li><img src="/images/q6.png" alt="q6"></li>
+                <li><img src="/images/q7.png" alt="q7"></li>
+                <li><img src="/images/q8.png" alt="q8"></li>
+                <li><img src="/images/q9.png" alt="q9"></li>
+                <li><img src="/images/q10.png" alt="q10"></li>
+
+            </ol>
+            
+
+
+            <p id="ans">Click here to answer</p>
+            <hr>
+            <small style="font-family: monospace; ">
+                H I N T :  Images <i class="fas fa-arrow-right"></i> Songs <i class="fas fa-arrow-right"></i> Movies
+                <br> <u>Points to be noted</u>
+                <br>Join the first letters<br>
+                Final answer may or may not be a meaningful word <br>
+                Visit later for more hints
+                
+             </small>
+
+        </div>
+    
+        <img id="soln-bg" src="/images/3704081.jpg" alt="">
+   
+        <div  id="solution" >
+            <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+            <div id="soln-form" >
+                <form  action="/playground/" method="post">
+                    <p class="tracking-in-expand">
+                        <span style="color: #db095a;">Hey there,</span> <br> 
+                        <span style="font-size: 110%;">Type password here</span> <br> 
+                        <span style="font-size: 120%;">To Unlock Next Level</span> <br>
+                        <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                            <span style="font-size: 40%; color: rgb(10, 10, 128);">Click here for Question <i class="fas fa-question-circle"></i> </span>
+                        </a>
+                    </p>
+                    <div class="jello-horizontal" id="answer">
+                    <input name="password" placeholder="Type here" type="text" required > 
+                    <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                    <small style="font-family: monospace; font-size: 10px;">Answering time ends at today 10:00 PM </small><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+      
+        <% }else{ %>
+
+            <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
+                <h2>Sorry, You didn't cleared level One</h2>
+                <h5>“ Success is not final, failure is not fatal: <br> it is the courage to continue that counts.” <br> - Winston Churchill.</h5>
+                <p>GAME OVER</p>
+            </div>
+    
+    
+        <% } %>
+    
+    
+        <% if(user.level){ %>
+        <footer>
+            <h3> Inno Hunt - Rules</h3>
+            <div >
+                <ol style="text-align: left;">
+                    <p>If you have any doubts,ask your queries to <a>clubofinnovaters@gmail.com</a></p>
+                    <li>You can answer only in the time between 10:00 AM to 10:00 PM (12 hrs)</li><br>
+                    <li>Questions are displayed on the remaining time (i.e from 12:00 AM to 11:59 PM). </li><br>
+                    <li>If you failed to answer within the given time, then you can't enter into next level.</li><br>
+                    <li>Each level takes place on each day (except level one - 2 days)</li><br>
+                    <li>You can try checking your answer for unlimited number of times</li>
+                </ol>
+            </div>
+        </footer>
+        <% } %>
+    
+    
+        <script>
+    
+            var navItem = document.getElementById('continue');
+            var interval;
+            var endPoint = 0;
+    
+                navItem.addEventListener('click',function(event) {
+                    
+                    var targetId = 'solution';
+                    endPoint = 10;
+                    event.preventDefault();
+                    var targetSection = document.getElementById(targetId);
+                    interval = setInterval(scrollVertically, 2, targetSection);
+                });
+    
+            document.getElementById('ans').addEventListener('click',function(event) {
+                    
+                    var targetId = 'solution';
+                    endPoint = 10;
+                    event.preventDefault();
+                    var targetSection = document.getElementById(targetId);
+                    interval = setInterval(scrollVertically, 2, targetSection);
+                });
+    
+            function scrollVertically(targetSection) {
+                var targetCoordinates = targetSection.getBoundingClientRect();
+                if (targetCoordinates.top<=endPoint)
+                {
+                    clearInterval(interval);
+                    return;
+                }
+                window.scrollBy(0,10);
+            }
+    
+            // question-container
+    
+            var interval_q;
+            var endPoint_q = 0;
+            
+            document.getElementById('ques').addEventListener('click',function(event) {
+                endPoint_q = 10;
+                event.preventDefault();
+                var targetSection_q = document.getElementById('question-container');
+                interval_q = setInterval(scrollVertically_q, 2, targetSection_q);
+            });
+    
+            function scrollVertically_q(targetSection_q) {
+                var targetCoordinates_q = targetSection_q.getBoundingClientRect();
+                if (targetCoordinates_q.top>endPoint_q)
+                {
+                    clearInterval(interval_q);
+                    return;
+                }
+                window.scrollBy(0,-10);
+            }
+    
+    
+        </script>
+      
+    
+    </body>
+    

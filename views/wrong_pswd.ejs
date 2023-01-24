@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/css/sign_in.css">
+<link
+href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+rel="stylesheet">
+<style>
+    body {
+        background-image: linear-gradient(to right bottom, #fb173e, #ff5926, #ff8501, #f9ac00, #ebcf12);
+        background-size: 400% 400%;
+        animation: bg-color-change 3s ease infinite;
+        font-family: Fredoka One;
+        color: white;
+        font-size: 2.5vw;
+        text-align: center;
+        
+    }
+    @keyframes bg-color-change {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    a{
+        /* text-decoration: none; */
+        font-family: inherit;
+        color: inherit;
+    }
+    img {
+            width: 30vw;
+        }
+    @media (max-width:768px){
+        body {
+            font-size: 5vw;
+        }
+        img {
+            width: 70vw;
+        }
+    }
+
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+    <div>
+        <h3>Try Again!</h3>
+        <p>The password is incorrect</p>
+        
+        <img  src="/images/try-again.png" alt="Level upgraded Image">
+        <br><br>
+
+        <a href="/back">Back</a>
+        <br>
+        <hr>
+        <span>Note : The password contains only alphabets.</span>
+    </div>
+
+</body>

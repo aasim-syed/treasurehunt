@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<link rel="stylesheet" href="/css/sign_in.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+
+    <div style=" position: absolute; left: 40; bottom: 40; ">
+        <a style="text-decoration: none; font-size: 30px; color: white;" href="/"><i class="fas fa-home"></i> </a>
+    </div>
+
+    <form action="/users/create-session" method="POST" class="kutu">
+        <div class="form-giris">
+            <input type="email" name="email" required>
+            <label>Email</label>
+        </div>
+        <div class="form-giris">
+            <input type="password" name="password" required>
+            <label>Password</label>
+        </div>
+
+        <input type="submit" class="girisbuton" value="SIGN IN">
+
+        <div class="col s12 m6 offset-m3 center-align" >
+            <a class="oauth-container btn darken-4 white black-text login-google" href="/users/auth/google" >
+                <div class="left">
+                    <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                </div>
+                Login with Google
+            </a>
+        </div>        
+
+        <!-- <div class="kayit-yazi">New User? <a href="/users/sign-up">SIGN-UP <i class="fas fa-user-plus"></i></a></div> -->
+    </form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+</body>

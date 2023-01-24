@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="/css/sign_in.css">
+<link
+href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+rel="stylesheet">
+<style>
+    body {
+        /* background-image: linear-gradient(to right bottom, #00dcfd, #00c5ff, #42a4ff, #ad74ff, #eb12bc); */
+        background-image: linear-gradient(to right bottom, #f2e816, #ffb00b, #ff6f4c, #ff2284, #eb12bc);        animation: bg-color-change 3s ease infinite;
+        font-family: Fredoka One;
+        color: white;
+        font-size: 2.5vw;
+        text-align: center;
+        
+    }
+    .scale-up-center {
+	-webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
+	        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
+    }
+    @-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    }
+    @keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    }
+
+    @keyframes bg-color-change {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    a{
+        /* text-decoration: none; */
+        font-family: inherit;
+        color: inherit;
+    }
+    img {
+            width: 30vw;
+        }
+    @media (max-width:768px){
+        body {
+            font-size: 5vw;
+        }
+        img {
+            width: 70vw;
+        }
+    }
+
+
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+    <div>
+        <h3>Congratulations !</h3>
+        <p>You are the winner of Treasure Hunt</p>
+        <span>Your can choose your PRIZE, <br>
+            1. RECHARGE upto Rs. 200 or <br>
+            2. NETFLIX account subscription <br> for 1 month <br>
+        </span>
+        <img class="scale-up-center"  src="/images/success.png" >
+        <br>
+        <hr>
+        <p>Check your mail after 3 days, regarding prize updates</p>
+        <p>Thanks for your participation</p>
+        <a href="/back">Back</a>
+
+    </div>
+
+</body>
